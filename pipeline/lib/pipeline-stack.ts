@@ -116,7 +116,8 @@ export class PipelineStack extends cdk.Stack {
         new GitHubSourceAction({
           owner: repositoryOwner,
           repo: infrastructureRepoName,
-          actionName: infrastructureBranchName,
+          branch: infrastructureBranchName,
+          actionName: 'GitHub_Source',
           output: infrastructureSourceOutput,
           oauthToken: githubToken,
         }),
